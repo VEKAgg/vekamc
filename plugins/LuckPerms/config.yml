@@ -1,0 +1,4 @@
+# LuckPerms Config
+server: smp
+storage-method: h2
+watch-file: true

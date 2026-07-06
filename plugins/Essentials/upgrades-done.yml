@@ -1,0 +1,8 @@
+updateLegacyToAdventure: true
+newUidCacheBuilt: true
+updateSpawnsToNewSpawnsConfig: true
+updateJailsToNewJailsConfig: true
+warnMetrics: true
+updateRandomTeleport: true
+movemotdToFile: true
+moverulesToFile: true
