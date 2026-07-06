@@ -1,0 +1,49 @@
+default:
+  permissions:
+    - prefix.10.&7[Player] : true
+    - weight.10: true
+    - essentials.spawn: true
+    - essentials.tpa: true
+    - essentials.tpaccept: true
+    - essentials.tpdeny: true
+    - essentials.home: true
+    - essentials.sethome: true
+    - essentials.delhome: true
+    - essentials.warp: true
+    - essentials.warp.list: true
+    - essentials.msg: true
+    - essentials.r: true
+    - essentials.list: true
+    - essentials.help: true
+    - essentials.motd: true
+    - essentials.rules: true
+    - essentials.signs.use.buy: true
+    - essentials.signs.use.sell: true
+    - essentials.signs.use.trade: true
+    - essentials.signs.use.free: true
+    - harbor.ignored: false
+  parents: []
+moderator:
+  permissions:
+    - prefix.50.&b[Mod] : true
+    - weight.50: true
+    - essentials.kick: true
+    - essentials.ban: true
+    - essentials.unban: true
+    - essentials.mute: true
+    - essentials.unmute: true
+    - essentials.tempban: true
+    - essentials.fly: true
+    - essentials.tp: true
+    - essentials.tphere: true
+    - essentials.invsee: true
+    - essentials.socialspy: true
+  parents:
+    - default
+admin:
+  permissions:
+    - prefix.100.&c[Admin] : true
+    - weight.100: true
+    - "*": true
+  parents:
+    - moderator

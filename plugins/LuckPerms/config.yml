@@ -1,4 +1,4 @@
 # LuckPerms Config
 server: smp
-storage-method: h2
+storage-method: yaml-combined
 watch-file: true
