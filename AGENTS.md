@@ -2,11 +2,23 @@
 
 ## What This Repo Is
 
-Paper Minecraft server **configuration repository** — no application code, no build system. Contains config files, plugin JARs, and plugin configs for a Survival Multiplayer (SMP) server.
+Paper Minecraft server **configuration repository** — no application code, no build system. Contains config files, plugin JARs, and plugin configs for a **multi-gamemode Minecraft network** (Survival, Skyblock, Factions, Prison, Bedwars, Skywars, Plots, Towny).
 
-- **Paper version**: 1.21.11 (`paper-1.21.11.jar`, build 132)
-- **Branch**: `Old` (active server config). `main` has legacy web project files.
+- **Paper version**: 1.21.1 (`paper-1.21.11.jar`)
+- **Branch**: `main` (active server config). `Old` has legacy config.
 - **Remote**: `https://github.com/VEKAgg/vekamc.git`
+- **Domain**: `mc.veka.gg`
+- **Owner**: Shafaat Ahmed Sharief
+
+## Hosting Architecture
+
+```
+[Gaming PC (Atlas OS / Windows 11)]
+    └── [Proxmox VM]
+        └── [Pterodactyl Panel]
+            └── [PaperMC Server]
+                └── [Cloudflare Tunnel] → mc.veka.gg
+```
 
 ## Key Files
 
@@ -15,25 +27,70 @@ Paper Minecraft server **configuration repository** — no application code, no 
 | `server.properties` | Core Minecraft server settings |
 | `spigot.yml` | Spigot-layer settings (mob caps, entity ranges) |
 | `bukkit.yml` | Bukkit-layer settings (autosave, chunk GC) |
-| `config/paper-global.yml` | Paper global optimizations |
-| `config/paper-world-defaults.yml` | Paper per-world defaults |
+| `config/paper-global.yml` | Paper global optimizations (v29) |
+| `config/paper-world-defaults.yml` | Paper per-world defaults (v31) |
 | `run.bat` | Local dev launcher (Windows, 4G heap, Aikar flags) |
-| `server-icon.png` | Custom server favicon (64x64) generated from asset `v1.png` |
+| `server-icon.png` | Custom server favicon (64x64) |
 | `plugins/*/config.yml` | Per-plugin configuration |
-| `plugins/LuckPerms/yaml-storage/groups.yml` | Combined YAML storage file mapping all groups, prefixes, and permissions |
+| `plugins/LuckPerms/yaml-storage/groups.yml` | LuckPerms groups and permissions |
 
-## Installed Plugins
+## Installed Plugins (31)
 
-| Plugin | JAR | Config Dir |
-|--------|-----|------------|
-| EssentialsX | `EssentialsX-2.21.0.jar` | `plugins/Essentials/` |
-| EssentialsXChat | `EssentialsXChat-2.21.0.jar` | — |
-| LuckPerms | `LuckPerms-Bukkit-5.5.59.jar` | `plugins/LuckPerms/` |
-| Vault | `Vault-1.7.3-b131.jar` | `plugins/Vault/` |
-| PlaceholderAPI | `PlaceholderAPI-2.11.6.jar` | `plugins/PlaceholderAPI/` |
-| ViaVersion | `ViaVersion-5.1.1.jar` | `plugins/ViaVersion/` |
-| Harbor | `Harbor.jar` | `plugins/Harbor/` |
-| spark | `spark.jar` | `plugins/spark/` |
+### Security & Core
+| Plugin | JAR | Purpose |
+|--------|-----|---------|
+| AuthMe | `AuthMe-5.6.0-FORK-Universal.jar` | Login/register for cracked mode |
+| Grim Anticheat | `grimac-bukkit-2.3.74-7807650.jar` | Anti-cheat (29 detections) |
+| ProtocolLib | `ProtocolLib.jar` | Packet-level checks (required by Grim) |
+| EssentialsX | `EssentialsX-2.21.0.jar` | Commands, economy, homes, kits |
+| EssentialsXChat | `EssentialsXChat-2.21.0.jar` | Chat formatting with rank prefixes |
+| EssentialsXSpawn | `EssentialsXSpawn-2.21.0.jar` | Global spawn management |
+| EssentialsXProtect | `EssentialsXProtect-2.21.0.jar` | Block protection and physics control |
+| EssentialsXAntiBuild | `EssentialsXAntiBuild-2.21.0.jar` | Build restrictions for new players |
+| LuckPerms | `LuckPerms-Bukkit-5.5.59.jar` | Permission management |
+| Vault | `Vault-1.7.3-b131.jar` | Economy/permissions API bridge |
+| PlaceholderAPI | `PlaceholderAPI-2.11.6.jar` | Placeholder system |
+| ViaVersion | `ViaVersion-5.1.1.jar` | Multi-version support (1.8-1.21) |
+| Multiverse-Core | `multiverse-core-5.7.2.jar` | Multi-world management |
+
+### Protection
+| Plugin | JAR | Purpose |
+|--------|-----|---------|
+| WorldGuard | `worldguard-bukkit-7.0.12-dist.jar` | Region protection |
+| WorldEdit | `worldedit-bukkit-7.3.10-beta-01.jar` | Building tool |
+| CoreProtect | `CoreProtect-CE-23.2.jar` | Block logging and rollback |
+| GriefPrevention | `GriefPrevention.jar` | Golden shovel land claims |
+
+### Gamemode Plugins
+| Plugin | JAR | Purpose |
+|--------|-----|---------|
+| BentoBox | `BentoBox.jar` | Skyblock platform |
+| BSkyBlock | `BSkyBlock.jar` | Skyblock gamemode addon |
+| PvPIndex Factions | `PvPIndex-Factions.jar` | Factions (claims, power, raids) |
+| ScreamingBedWars | `ScreamingBedWars.jar` | Bedwars minigame |
+| Towny | `Towny.jar` | Towns, nations, diplomacy |
+
+### Economy & Shop
+| Plugin | JAR | Purpose |
+|--------|-----|---------|
+| ChestShop | `ChestShop.jar` | Player-run chest shops |
+| Harbor | `Harbor.jar` | Sleep/night-skip mechanics |
+
+### Admin & Utility
+| Plugin | JAR | Purpose |
+|--------|-----|---------|
+| AdvancedBan | `AdvancedBan.jar` | Ban/mute/tempban with history |
+| TAB | `TAB.jar` | Custom tab list |
+| SkinRestorer | `SkinRestorer.jar` | Custom skins for cracked players |
+| ClearLag | `ClearLag.jar` | Auto-remove excess items |
+| spark | `spark.jar` | Performance profiler |
+
+### Disabled / Not Installed
+| Plugin | Status | Reason |
+|--------|--------|--------|
+| EssentialsXGeoIP | Disabled | Requires MaxMind license |
+| EssentialsXDiscord | Disabled | No Discord bot token |
+| EssentialsXDiscordLink | Disabled | Depends on EssentialsXDiscord |
 
 ## Running the Server
 
@@ -56,13 +113,19 @@ The `server.jar` is gitignored. The actual JAR is `paper-1.21.11.jar`. Do not cr
 
 ## Server State
 
-- **Difficulty**: Normal (recently changed from Easy)
-- **Gamemode**: Survival
-- **Max players**: 20
-- **Online mode**: true (cracked mode planned)
+- **Branch**: `main` (active). `Old` has legacy config.
+- **Difficulty**: Normal
+- **Gamemode**: Survival (default)
+- **Max players**: 69
+- **Online mode**: false (cracked — requires AuthMe for security)
+- **View distance**: 16 chunks
+- **Simulation distance**: 5 chunks
+- **Spawn protection**: 0 (Essentials handles it)
+- **Allow flight**: true
 - **PVP**: true
 - **No ops** configured (`ops.json` empty)
 - **No whitelist** enforced
+- **Pause when empty**: 60 seconds
 - **EULA**: accepted
 
 ## Plugin Config Highlights
@@ -75,6 +138,8 @@ The `server.jar` is gitignored. The actual JAR is `paper-1.21.11.jar`. Do not cr
 - MOTD in `plugins/Essentials/motd.txt`
 - Item sell prices in `plugins/Essentials/worth.yml`
 - Random teleport configured in `plugins/Essentials/tpr.yml`
+- Teleport delay: 3 seconds
+- Spawn protection handled by WorldGuard
 
 ### LuckPerms
 - Server name: "smp"
@@ -89,6 +154,23 @@ The `server.jar` is gitignored. The actual JAR is `paper-1.21.11.jar`. Do not cr
 - AFK detection: 15 min timeout
 - Excluded worlds: nether, end
 
+### Multiverse-Core
+- Manages separate worlds per gamemode
+- Worlds: survival, skyblock, factions, prison, bedwars, skywars, plots, towny
+- `/mv tp <world>` to switch gamemodes
+
+### EssentialsXAntiBuild
+- Will be used to prevent recruits/guests from editing protected locations
+- Works with LuckPerms permission nodes
+
+### EssentialsXGeoIP
+- Disabled (requires MaxMind license)
+- May remain disabled unless country lookup is needed
+
+### EssentialsXDiscord / DiscordLink
+- Disabled (no bot token)
+- Will be configured when Discord integration becomes a priority
+
 ## Conventions
 
 - This is a **config-only repo** — no Java source, no build tools, no tests
@@ -99,8 +181,13 @@ The `server.jar` is gitignored. The actual JAR is `paper-1.21.11.jar`. Do not cr
 
 ## Common Gotchas
 
-- `paper-1.21.11.jar` is the Paper JAR (Build 132), not `server.jar` (gitignored)
-- `run.bat` uses the hardcoded JetBrains PyCharm Community Edition 2025.2.0.1 JBR path (`C:\Program Files\JetBrains\PyCharm Community Edition 2025.2.0.1\jbr\bin\java.exe`) — won't work on other machines without editing.
-- `EssentialsX` uses both `config.yml` (configured with a 3-second teleport delay and tablist prefixes enabled) and separate files (`kits.yml`, `motd.txt` (updated welcome message layout), `worth.yml`, `tpr.yml`, `custom_items.yml`)
+- `paper-1.21.11.jar` is the Paper JAR, not `server.jar` (gitignored)
+- `run.bat` uses a hardcoded JetBrains JRE path — won't work on other machines without editing
+- `EssentialsX` uses both `config.yml` and separate files (`kits.yml`, `motd.txt`, `worth.yml`, `tpr.yml`, `custom_items.yml`)
 - `spigot.yml` and `bukkit.yml` are auto-generated by Paper on first run — edits should be minimal
 - Paper config files (`config/paper-*.yml`) use versioned schemas — don't manually add unknown keys
+- `online-mode=false` means AuthMe must be installed before going live or anyone can steal usernames
+- GrimAnticheat requires ProtocolLib — both must be installed together
+- X-Prison and PlotSquared need manual download from SpigotMC (not on Modrinth)
+- Cloudflare Tunnel is used for external access — ensure tunnel is running before players can join
+- Java 24 is required — server won't start on older Java versions

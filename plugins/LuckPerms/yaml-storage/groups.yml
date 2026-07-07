@@ -1,13 +1,16 @@
 default:
   permissions:
+    # LuckPerms meta
     - prefix.10.&7[Player] : true
     - weight.10: true
+    # Essentials - General
     - essentials.spawn: true
     - essentials.tpa: true
     - essentials.tpaccept: true
     - essentials.tpdeny: true
     - essentials.home: true
     - essentials.sethome: true
+    - essentials.sethome.multiple: true
     - essentials.delhome: true
     - essentials.warp: true
     - essentials.warp.list: true
@@ -17,16 +20,134 @@ default:
     - essentials.help: true
     - essentials.motd: true
     - essentials.rules: true
+    - essentials.pay: true
+    - essentials.balance: true
+    - essentials.balance.others: true
+    - essentials.balancetop: true
+    - essentials.sell: true
+    - essentials.worth: true
+    - essentials.kit: true
+    - essentials.kit.tools: true
+    - essentials.kit.dtools: true
+    - essentials.kit.notch: true
+    - essentials.kit.color: true
+    - essentials.kit.firework: true
+    - essentials.afk: true
+    - essentials.back: true
+    - essentials.back.ondeath: true
+    - essentials.compass: true
+    - essentials.depth: true
+    - essentials.getpos: true
+    - essentials.itemdb: true
+    - essentials.mail: true
+    - essentials.mail.send: true
+    - essentials.me: true
+    - essentials.near: true
+    - essentials.ping: true
+    - essentials.realname: true
+    - essentials.seen: true
+    - essentials.suicide: true
+    - essentials.time: true
+    - essentials.top: true
+    - essentials.whois: true
+    # Essentials - Signs
     - essentials.signs.use.buy: true
     - essentials.signs.use.sell: true
     - essentials.signs.use.trade: true
     - essentials.signs.use.free: true
+    - essentials.signs.use.warp: true
+    - essentials.signs.use.kit: true
+    - essentials.signs.use.heal: true
+    - essentials.signs.use.time: true
+    - essentials.signs.use.weather: true
+    - essentials.signs.use.info: true
+    - essentials.signs.use.disposal: true
+    - essentials.signs.use.mail: true
+    - essentials.signs.use.repair: true
+    - essentials.signs.use.enchant: true
+    - essentials.signs.use.gamemode: true
+    - essentials.signs.use.protection: true
+    - essentials.signs.create.trade: true
+    - essentials.signs.create.protection: true
+    - essentials.signs.break.trade: true
+    - essentials.signs.break.protection: true
+    # Harbor
     - harbor.ignored: false
+    # Multiverse
+    - multiverse.access: true
+    - multiverse.list: true
+    - multiverse.portal: true
+    - multiverse.tp: true
+    # BentoBox / BSkyBlock (Skyblock)
+    - bentobox.island: true
+    - bentobox.createisland: true
+    - bskyblock.island: true
+    - bskyblock.island.go: true
+    - bskyblock.island.info: true
+    - bskyblock.island.settings: true
+    - bskyblock.island.spawn: true
+    - bskyblock.island setwarp: true
+    - bskyblock.island delwarp: true
+    - bskyblock.island warps: true
+    - bskyblock.island tp: true
+    - bskyblock.island kick: true
+    - bskyblock.island invite: true
+    - bskyblock.island accept: true
+    - bskyblock.island reject: true
+    - bskyblock.island leave: true
+    - bskyblock.island makeleader: true
+    - bskyblock.island settings: true
+    - bskyblock.island team: true
+    - bskyblock.island level: true
+    - bskyblock.island top: true
+    - bskyblock.island challenges: true
+    # PvPIndex Factions
+    - factions.create: true
+    - factions.invite: true
+    - factions.kick: true
+    - factions.leave: true
+    - factions.list: true
+    - factions.show: true
+    - factions.map: true
+    - factions.chat: true
+    - factions.money: true
+    - factions.claim: true
+    - factions.unclaim: true
+    - factions.power: true
+    - factions.sethome: true
+    - factions.home: true
+    - factions.sethome: true
+    # Towny
+    - towny.town: true
+    - towny.town.resident: true
+    - towny.town.new: true
+    - towny.town.join: true
+    - towny.town.leave: true
+    - towny.town.claim: true
+    - towny.town.unclaim: true
+    - towny.town.plot: true
+    - towny.town.list: true
+    - towny.town.map: true
+    - towny.nation: true
+    - towny.spawntp: true
+    - towny setwarp: true
+    - towny warp: true
+    - towny warps: true
+    # ChestShop
+    - chestshop.buy: true
+    - chestshop.sell: true
+    - chestshop.create: true
+    - chestshop.use: true
+    # ClearLag
+    - clearlag.warn: true
+    - clearlag.clear: true
   parents: []
 moderator:
   permissions:
+    # LuckPerms meta
     - prefix.50.&b[Mod] : true
     - weight.50: true
+    # Essentials - Moderation
     - essentials.kick: true
     - essentials.ban: true
     - essentials.unban: true
@@ -38,12 +159,139 @@ moderator:
     - essentials.tphere: true
     - essentials.invsee: true
     - essentials.socialspy: true
+    - essentials.vanish: true
+    - essentials.heal: true
+    - essentials.feed: true
+    - essentials.gamemode: true
+    - essentials.clearinventory: true
+    - essentials.essentials: true
+    - essentials.item: true
+    - essentials.give: true
+    - essentials.repair: true
+    - essentials.enchant: true
+    - essentials.unenchant: true
+    - essentials.rename: true
+    - essentials.lore: true
+    - essentials.setworth: true
+    - essentials.backup: true
+    - essentials.gc: true
+    - essentials.reload: true
+    - essentials.msg: true
+    - essentials.realname: true
+    - essentials.whois: true
+    # WorldGuard
+    - worldguard.region: true
+    - worldguard.region.flag: true
+    - worldguard.region.setflag: true
+    - worldguard.region.info: true
+    - worldguard.region.list: true
+    - worldguard.region.select: true
+    - worldguard.region.define: true
+    - worldguard.region.redefine: true
+    - worldguard.region.delete: true
+    - worldguard.region.claim: true
+    - worldguard.region.unclaim: true
+    - worldguard.region.teleport: true
+    - worldguard.protection.alerts: true
+    - worldguard.protection.check: true
+    - worldguard.protection.iflag: true
+    - worldguard.protection.state: true
+    - worldguard.protection.tell: true
+    # WorldEdit
+    - worldedit.selection: true
+    - worldedit.wand: true
+    - worldedit.set: true
+    - worldedit.replace: true
+    - worldedit.overlay: true
+    - worldedit.copy: true
+    - worldedit.cut: true
+    - worldedit.paste: true
+    - worldedit.undo: true
+    - worldedit.redo: true
+    - worldedit.rotate: true
+    - worldedit.flip: true
+    - worldedit.generate: true
+    - worldedit.outline: true
+    - worldedit.walls: true
+    - worldedit.curve: true
+    - worldedit.drawsphere: true
+    - worldedit.hollowsphere: true
+    - worldedit cylinders: true
+    - worldedit.hollowcylinder: true
+    - worldedit.fillsphere: true
+    - worldedit.fillcylinder: true
+    - worldedit.setbiome: true
+    - worldedit.glow: true
+    # CoreProtect
+    - coreprotect.lookup: true
+    - coreprotect.rollback: true
+    - coreprotect.restore: true
+    - coreprotect.inspect: true
+    # EssentialsX AntiBuild
+    - essentials.build: true
+    - essentials.protect: true
   parents:
     - default
 admin:
   permissions:
+    # LuckPerms meta
     - prefix.100.&c[Admin] : true
     - weight.100: true
+    # LuckPerms - Full Access
     - "*": true
+    # LuckPerms - Admin Specific
+    - luckperms.*: true
+    - luckperms.user: true
+    - luckperms.group: true
+    - luckperms.group.user: true
+    - luckperms.group.moderator: true
+    - luckperms.group.admin: true
+    - luckperms.group.default: true
+    - luckperms.meta: true
+    - luckperms.node: true
+    - luckperms.parent: true
+    - luckperms.track: true
+    - luckperms.prefix: true
+    - luckperms.suffix: true
+    - luckperms.weight: true
+    - luckperms.bulkupdate: true
+    - luckperms.export: true
+    - luckperms.import: true
+    - luckperms.applyedits: true
+    - luckperms.attached: true
+    - luckperms.autoop: true
+    - luckperms.editor: true
+    - luckperms.emulatedisplayname: true
+    - luckperms.emulateprefix: true
+    - luckperms.emulatesuffix: true
+    - luckperms.log: true
+    - luckperms.networkstatuses: true
+    - luckperms.sync: true
+    - luckperms.info: true
+    - luckperms.check: true
+    - luckperms.verbose: true
+    - luckperms.verboseoff: true
+    - luckperms.cleanup: true
+    - luckperms.creategroup: true
+    - luckperms.deletegroup: true
+    - luckperms.listgroups: true
+    - luckperms.hierarchy: true
+    - luckperms.setimpostor: true
+    - luckperms.unsetimpostor: true
+    - luckperms.userpromote: true
+    - luckperms.userdemote: true
+    # WorldGuard - Full
+    - worldguard.region.*: true
+    - worldguard.region.bypass.*: true
+    - worldguard.protection.*: true
+    # WorldEdit - Full
+    - worldedit.*: true
+    # CoreProtect - Full
+    - coreprotect.*: true
+    # Essentials - Full
+    - essentials.*: true
+    # EssentialsX AntiBuild - Full
+    - essentials.build: true
+    - essentials.protect: true
   parents:
     - moderator

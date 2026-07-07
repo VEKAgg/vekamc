@@ -976,8 +976,13 @@ chat:
   # World aliases allow you to replace the world name with something different in the chat format.
   # If you are using world aliases, make sure to remove the '#' at the start to allow the setting to be read.
   world-aliases:
-  #  plots: "&dP&r"
-  #  creative: "&eC&r"
+    skyblock: "&bSB"
+    factions: "&4Fac"
+    prison: "&8Prison"
+    bedwars: "&6BW"
+    skywars: "&9SW"
+    plots: "&dPlots"
+    towny: "&2Town"
 
   # Whether players should be placed into shout mode by default.
   shout-default: false
@@ -1174,19 +1179,19 @@ protect:
   blacklist:
 
     # Which blocks should people be prevented from placing?
-    placement: LAVA,TNT,LAVA_BUCKET
+    placement: LAVA,TNT,LAVA_BUCKET,END_CRYSTAL,TNT_MINECART
 
     # Which items should people be prevented from using?
-    usage: LAVA_BUCKET
+    usage: LAVA_BUCKET,FLINT_AND_STEEL
 
     # Which blocks should people be prevented from breaking?
-    break:
+    break: CHEST,TRAPPED_CHEST,BARREL,SHULKER_BOX
 
     # Which blocks should not be moved by pistons?
-    piston:
+    piston: CHEST,TRAPPED_CHEST,BARREL,SHULKER_BOX
 
     # Which blocks should not be dispensed by dispensers
-    dispenser:
+    dispenser: LAVA_BUCKET,FLINT_AND_STEEL,TNT
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -1228,7 +1233,7 @@ respawn-listener-priority: high
 spawn-join-listener-priority: high
 
 # When users die, should they respawn at their first home or bed, instead of the spawnpoint?
-respawn-at-home: false
+respawn-at-home: true
 
 # When users die, should they respawn at their bed instead of the spawnpoint?
 # The value of respawn-at-home (above) has to be true.
