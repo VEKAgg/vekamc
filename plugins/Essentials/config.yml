@@ -788,9 +788,13 @@ world-home-permissions: false
 # Create the 'home-rank' below, and give the matching permission: essentials.sethome.multiple.<home-rank>
 # For more information, visit http://wiki.ess3.net/wiki/Multihome
 sethome-multiple:
-  default: 3
-  vip: 5
-  staff: 10
+  recruit: 1
+  default: 2
+  active: 4
+  supporter: 6
+  moderator: -1
+  admin: -1
+  owner: -1
 
 # In this example someone with 'essentials.sethome.multiple' and 'essentials.sethome.multiple.vip' will have 5 homes.
 # Remember, they MUST have both permission nodes in order to be able to set multiple homes.
@@ -947,9 +951,9 @@ chat:
   # {TEAMPREFIX} - The sender's scoreboard team prefix.
   # {TEAMSUFFIX} - The sender's scoreboard team suffix.
 
-  format: '{PREFIX}&r{DISPLAYNAME}&7:&f {MESSAGE}'
+  format: '&f{PREFIX}&r &f{USERNAME} &7>> &f{MESSAGE}'
   #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
-  #format: '&7{PREFIX}&r {DISPLAYNAME}&r &7{SUFFIX}&r: {MESSAGE}'
+  #format: '{PREFIX}&r{DISPLAYNAME}&7:&f {MESSAGE}'
 
   # You can also specify a format for each type of chat.
   #format:
@@ -1207,7 +1211,7 @@ newbies:
   # If so, use this format, replacing {DISPLAYNAME} with the player name.
   # If not, set to ''
   #announce-format: ''
-  announce-format: '&dWelcome {DISPLAYNAME}&d to the server!'
+  announce-format: '&dWelcome &l{DISPLAYNAME}&d to VEKA.GG!'
 
   # When we spawn for the first time, which spawnpoint do we use?
   # Set to "none" if you want to use the spawn point of the world.
@@ -1216,7 +1220,7 @@ newbies:
   # Do we want to give users anything on first join? Set to '' to disable
   # This kit will be given regardless of cost and permissions, and will not trigger the kit delay.
   #kit: ''
-  kit: tools
+  kit: starter
 
 # What priority should we use for handling respawns?
 # Set this to none, if you want vanilla respawning behaviour.

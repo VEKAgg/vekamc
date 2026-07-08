@@ -1,3 +1,34 @@
+recruit:
+  permissions:
+    # LuckPerms meta
+    - prefix.0.&7[Recruit] : true
+    - weight.5: true
+    # Essentials - Limited
+    - essentials.spawn: true
+    - essentials.tpa: true
+    - essentials.tpaccept: true
+    - essentials.tpdeny: true
+    - essentials.home: true
+    - essentials.sethome: true
+    - essentials.delhome: true
+    - essentials.msg: true
+    - essentials.r: true
+    - essentials.help: true
+    - essentials.motd: true
+    - essentials.rules: true
+    - essentials.balance: true
+    - essentials.kit: true
+    - essentials.kit.starter: true
+    - essentials.afk: true
+    - essentials.compass: true
+    - essentials.list: true
+    - essentials.me: true
+    - essentials.ping: true
+    - essentials.seen: true
+    - essentials.suicide: true
+    # Harbor
+    - harbor.ignored: false
+  parents: []
 default:
   permissions:
     # LuckPerms meta
@@ -141,7 +172,39 @@ default:
     # ClearLag
     - clearlag.warn: true
     - clearlag.clear: true
-  parents: []
+  parents:
+    - recruit
+active:
+  permissions:
+    # LuckPerms meta
+    - prefix.20.&6[Active] : true
+    - weight.20: true
+    # Essentials - Extra homes
+    - essentials.sethome.multiple: true
+    - essentials.sethome.multiple.active: true
+    - essentials.back: true
+    - essentials.back.ondeath: true
+    # Cosmetic
+    - essentials.nick: true
+    - essentials.nick.color: true
+  parents:
+    - default
+supporter:
+  permissions:
+    # LuckPerms meta
+    - prefix.30.&d[SUP] : true
+    - weight.30: true
+    # Essentials - Extra homes
+    - essentials.sethome.multiple: true
+    - essentials.sethome.multiple.vip: true
+    - essentials.back: true
+    - essentials.back.ondeath: true
+    # Cosmetic
+    - essentials.nick: true
+    - essentials.nick.color: true
+    - essentials.nick.format: true
+  parents:
+    - active
 moderator:
   permissions:
     # LuckPerms meta
@@ -231,7 +294,7 @@ moderator:
     - essentials.build: true
     - essentials.protect: true
   parents:
-    - default
+    - supporter
 admin:
   permissions:
     # LuckPerms meta
@@ -295,3 +358,56 @@ admin:
     - essentials.protect: true
   parents:
     - moderator
+owner:
+  permissions:
+    # LuckPerms meta
+    - prefix.200.&4[Owner] : true
+    - weight.200: true
+    # LuckPerms - Owner Specific
+    - "*": true
+    - luckperms.*: true
+    - luckperms.user.*: true
+    - luckperms.group.*: true
+    - luckperms.meta.*: true
+    - luckperms.node.*: true
+    - luckperms.parent.*: true
+    - luckperms.track.*: true
+    - luckperms.prefix.*: true
+    - luckperms.suffix.*: true
+    - luckperms.weight.*: true
+    - luckperms.bulkupdate.*: true
+    - luckperms.export.*: true
+    - luckperms.import.*: true
+    - luckperms.applyedits.*: true
+    - luckperms.attached.*: true
+    - luckperms.autoop.*: true
+    - luckperms.editor.*: true
+    - luckperms.emulatedisplayname.*: true
+    - luckperms.emulateprefix.*: true
+    - luckperms.emulatesuffix.*: true
+    - luckperms.log.*: true
+    - luckperms.networkstatuses.*: true
+    - luckperms.sync.*: true
+    - luckperms.info.*: true
+    - luckperms.check.*: true
+    - luckperms.verbose.*: true
+    - luckperms.verboseoff.*: true
+    - luckperms.cleanup.*: true
+    - luckperms.creategroup.*: true
+    - luckperms.deletegroup.*: true
+    - luckperms.listgroups.*: true
+    - luckperms.hierarchy.*: true
+    - luckperms.setimpostor.*: true
+    - luckperms.unsetimpostor.*: true
+    - luckperms.userpromote.*: true
+    - luckperms.userdemote.*: true
+    # All other plugins - Full
+    - worldguard.region.*: true
+    - worldguard.region.bypass.*: true
+    - worldguard.protection.*: true
+    - worldedit.*: true
+    - coreprotect.*: true
+    - essentials.*: true
+    - luckperms.*: true
+  parents:
+    - admin

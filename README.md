@@ -2,10 +2,10 @@
   <img src="server-icon.png" width="128" height="128" alt="VEKA Network">
 </p>
 
-<h1 align="center">VEKA Network</h1>
+<h1 align="center">VEKA.GG</h1>
 
 <p align="center">
-  <b>India's Multi-Gamemode Minecraft Network</b><br>
+  <b>Play Together. Build Together. Grow Together.</b><br>
   <sub>Survival &bull; Skyblock &bull; Factions &bull; Prison &bull; Bedwars &bull; Skywars &bull; Plots &bull; Towny</sub>
 </p>
 
@@ -100,14 +100,40 @@ VEKA Network is a **multi-gamemode Minecraft network** built for the Indian Mine
 
 We keep rules simple. Breaking them results in warnings, mutes, or bans.
 
-1. **No Griefing** — Don't destroy or steal from other players
-2. **No Hacking** — No hacked clients, x-ray, or unfair mods (Grim enforces this)
-3. **No Spam** — Don't flood chat or advertise
-4. **Be Respectful** — Treat everyone with respect
-5. **No Duping** — Don't exploit duplication glitches
-6. **English in Chat** — So staff can moderate fairly
-7. **No Lag Machines** — Don't build intentional lag machines
-8. **Respect Claims** — Don't build in other players' claimed areas
+1. **Respect all players** — Treat everyone with dignity and kindness
+2. **No griefing** — Don't destroy or steal from other players
+3. **No stealing** — Don't take items that aren't yours
+4. **No cheating** — Play fair, no unfair advantages
+5. **No x-ray** — Don't use texture packs or mods to see through blocks
+6. **No hacked clients** — No modified clients that give unfair advantages
+7. **No exploiting bugs** — Report bugs instead of abusing them
+8. **No lag machines** — Don't build intentional lag machines
+9. **No offensive builds** — Keep builds appropriate for all ages
+10. **Keep chat friendly** — No hate speech, bullying, or toxicity
+11. **No spam** — Don't flood chat or advertise
+12. **No advertising** — Don't promote other servers or services
+13. **Listen to staff** — Follow moderator and admin instructions
+14. **Report bugs** — Help us improve by reporting issues
+
+---
+
+## Punishment System
+
+We use a progressive punishment system:
+
+| Offense | Action |
+|---------|--------|
+| First Offense | Warning |
+| Second Offense | Temporary Mute |
+| Third Offense | Temporary Ban |
+| Repeated | Permanent Ban |
+
+**Serious Offenses (Immediate Permanent Ban):**
+- Hacked clients
+- X-ray usage
+- Duplication exploits
+- Intentional server crashes
+- Griefing new players
 
 ---
 
@@ -115,12 +141,12 @@ We keep rules simple. Breaking them results in warnings, mutes, or bans.
 
 | Rank | How to Get | Perks |
 |------|-----------|-------|
-| **Player** | Join the server | 3 homes, basic commands |
-| **VIP** | Playtime + activity | 5 homes, 2x sell multiplier, /fly in lobby |
-| **Builder** | Creative plots access | Plot building, WorldEdit tools |
-| **Prisoner** | Prison gamemode | Auto-sell, prison enchants |
+| **Recruit** | First join | 1 home, starter kit, limited commands |
+| **Player** | Auto-promote from recruit | 2 homes, full survival access |
+| **Active** | Activity-based | 4 homes, extra back history, cosmetic commands |
+| **Supporter** | Granted by staff | 6 homes, colored prefix, nickname colors |
 | **Moderator** | Staff application | Kick/ban, /vanish, moderation tools |
-| **Admin** | Staff invitation | Full admin access |
+| **Admin** | Staff invitation | WorldGuard, WorldEdit, full admin access |
 | **Owner** | Server creator | Everything |
 
 ---
