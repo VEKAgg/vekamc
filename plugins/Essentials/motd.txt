@@ -1,4 +1,29 @@
-&6&lVEKA.GG
-&aVanilla+ Survival
-&8 • &bPaperMC &8• &eJava Edition
-&8 • &aFriendly Community &8• &dSurvival SMP
+&6&m                                    
+&b&m                                    
+&a                                    
+&6      &l██╗   ██╗██╗  ██╗ ██████╔══██╗  ██╗
+&6      ██║   ██║██║  ██║██╔══██╔══██╗██║ ██╔╝
+&6      ██║   ██║████████╔════█████╔═██║██╔═══
+&6      ╚██╗ ██╔╝██╔══██╔╝██╔══██╔╝██║     ██╔═══
+&6       ╚████╗ ██║  ██║██║  ██║╚██████╔══██╗██║  ██╗
+&6        ╚═══╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝╚═╝  ╚═╝
+&a                                    
+&b&m                                    
+&6&m                                    
+&f                                    
+&a▔▔▔▔▔▔▔▔▔▔ &l&aSURVIVAL MULTIPLAYER&r &a▔▔▔▔▔▔▔▔▔▔
+                                    
+&f  &8&l▸ &r&bVersion&7: &f1.21.1 &8• &r&bPlayers&7: &f{ONLINE}&7/&f{MAXPLAYERS} &8• &r&bTime&7: &f{WORLDTIME12}
+                                    
+&f  &8▸ &a✦ &r&fSurvival &8• &e✦ &r&fEconomy &8• &c✦ &r&fPvP &8• &b✦ &r&fClaims &8• &d✦ &r&fCommunity
+                                    
+                                    
+&6  &8━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                    
+&a           &lWelcome to the VEKA Network, &e&l{PLAYER}&a&l!
+              &7Type &e/help &7for a list of commands
+                                    
+&6  &8━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+&7&m                                    
+&b&m                                    
+&6&m                                    
